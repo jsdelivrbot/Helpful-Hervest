@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Helpful Harvester</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"><span class="glyphicon glyphicon-home"></span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#fresh">ABOUT US</a></li>
+        <li><a href="#tour">SEARCH</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+       
+        <li><a href="#"></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="assets/images/farmersmarket.jpg" alt="Farmer's Market" width="1200" height="700">
+        <div class="carousel-caption">
+          <p class="text">"Let Food Be Thy Medicine and Medicine be thy Food" ~ Hippocrates</p>
+        </div>      
+      </div>
+      <div class="item">
+        <img src="assets/images/vegetables.jpg" alt="Fresh Vegetables" width="1200" height="700">
+        <div class="carousel-caption">
+          <p class="text">"One cannot think well, love well, sleep well, if one has not dined well" ~ Virgina Wolf</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="assets/images/farmers.jpg" alt="Farmers" width="1200" height="700">
+        <div class="carousel-caption">
+          <p class="text">"You don't need a silver fork to eat good food"~Paul Prudhomme</p>
+        </div>      
+      </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- Container (About Us Section) -->
+<div id="fresh" class="container text-center">
+  <h3>Our Story</h3>
+
+  <p>We are a group of students who felt the need to do something about this issue of food deserts in Southern California, particularly in poor neighborhoods and communities of color. We wanted to create a page that made it easy for absolutely anyone to find fresh, healthy, and inexpensive food wherever they may be. Farmer’s markets, in particular, allow communities to regain local control over one aspect of their economic lives, as well as reconnect residents to the land, as well as with each other. This product uses USDA’s National Farmers Market API but is not endorsed or certified by USDA</p>
+  <br>
+</div>
+<!-- Container (Market Search Section) -->
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">FARMER'S MARKET SEARCH</h3>
+    <p class="text-center">Enter your local zip code to find Farmer's Markets in your area.<br> Select from the list to get information about it.</p>
+
+<div class="row">
+  <div class="col-sm-6">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="zipcode" style= "color:white">Enter Zip Code:</label>
+          <input type="zipcode" class="form-control" id="zipcode" placeholder="99999" name="zipcode">
+           <button type="submit" class="btn btn-info btn-md" id="zipSubmit" value="Submit Button">Submit</button>
+        </div>
+     </form>
+       <table id="info">
+      
+       </table>
+  </div>
+  <div class="col-sm-6">
+      <div id="googleMap">
+      </div>
+  </div>
+
+  <div id="result" class="col-sm-6">
+      
+  </div>
+</div>
+
+
+
+<section style="clear: both">
+  <div class="row"><br></div>
+</section>
+<br>
+  <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="assets/images/dtlafarmersmarket.jpg" alt="DTLA" style="position: relative; width: 400px; height: 250px;">
+        <p><strong>Los Angeles</strong></p>  
+        <button type="submit" class="btn btn-info btn-md SpecificArea" value="Submit Button" data-zip="90012">See LA Events</button>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="assets/images/oc.jpg" alt="OC"  style="position: relative; width: 400px; height: 250px;">
+        <p><strong>Orange County</strong></p>
+        <button type="submit" class="btn btn-info btn-md SpecificArea" value="Submit Button" data-zip="92801">See OC Events</button>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="assets/images/longbeachorganic.jpg" alt="Long Beach" style="position: relative; width: 400px; height: 250px;">
+        <p><strong>Long Beach</strong></p>
+        <button type="submit" class="btn btn-info btn-md SpecificArea" value="Submit Button" data-zip="90801" >See LBC Events</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="contact" class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>Feel free to sign up for our newsletter</em></p>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-sm-6 form-group text-center">
+          <input class="form-control" id="Fname" name="name" placeholder="First Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group text-center">
+          <input class="form-control" id="Lname" name="name" placeholder="Last Name" type="text" required>
+        </div>
+        <div class="col-sm-12 form-group">
+          <input class="form-control" id="emailInput" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-sm-9">
+        <label><input type="checkbox" id="newsletter" name="newsletter">Check here for monthly newsletter</label>
+        </div>
+        <div class="col-sm-3 form-group">
+          <button action="/signup" method="POST" class="btn pull-right" id="formSubmit" type="submit">Send</button>
+        </div>
+      </div>
+      <div>
+        <label id="Thanks" style="color: green" > </label>
+         <label style = "color:red" id ="invalid"></label>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  </div>
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>© UCI Coding Bootcamp</p> 
+</footer>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpQYMTkzkXXHkS3q-fKtz0b1bLHq4QIMc"></script> <!--async defer-->
+    <script type="text/javascript" src="assets/javascript/javascript.js"></script>
+</body>
+</html>
